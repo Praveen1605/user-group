@@ -1,0 +1,15 @@
+<span class="user-check-box" (click)="onSelect()">
+  <span
+    ><img
+      [src]="userDetails.Image"
+      class="user-check-box-image"
+      alt="{{ userDetails.name }}"
+    /><i
+      *ngIf="userDetails.isSelected"
+      class="user-check-box-tick pi pi-check"
+    ></i>
+    <span class="user-check-box-name" [ngStyle]="{'right':userDetails.isSelected ? '191px' : '150px' }">
+      {{ userDetails.name }}
+    </span></span
+  >
+</span>

@@ -1,0 +1,39 @@
+<main class="user-group">
+    <section>
+        <h1 class="create-group-header">Create Group</h1>
+    </section>
+    <section>
+        <p-card>
+            <p-fileUpload #fubauto mode="basic" name="demo[]"  accept="image/*"
+                chooseIcon="pi pi-image" [auto]="true" (onUpload)="onUpload($event)" chooseLabel="Group Logo"></p-fileUpload>
+            <div class="p-fluid">
+                <div class="p-field">
+                    <label for="firstname1">Name</label>
+                    <input id="firstname1" type="text" pInputText />
+                </div>
+                <div class="p-field">
+                    <label for="lastname1">Description</label>
+                    <input id="lastname1" type="text" pInputText />
+                </div>
+            </div>
+        </p-card>
+    </section>
+    <section>
+        <br />
+        <p-button class="left45" *ngIf="sortOrder === 'descending' || sortOrder === ''" label="Sort"
+            icon="pi pi-sort-alpha-down" iconPos="left" (onClick)="sortAscendingOrder()"></p-button>
+        <p-button class="left45" *ngIf="sortOrder === 'ascending'" label="Sort" icon="pi pi-sort-alpha-down-alt"
+            iconPos="left" (onClick)="sortDescendingOrder()"></p-button>
+        <br />
+        <span *ngFor="let userDetail of userDetails" class="user-group-user-details">
+            <app-user-check-box class="user-group-user-detail" [userDetails]="userDetail"></app-user-check-box>
+        </span>
+        <!-- <app-user-check-box class="p-mb-2" [userDetails]="userDetails[0]"></app-user-check-box>
+        <app-user-check-box class="p-mb-2" [userDetails]="userDetails[1]"></app-user-check-box> -->
+    </section>
+    <section class="user-group-button-group">
+        <button pButton type="button" label="Update" class="left40 user-group-update p-button-raised"></button>
+        <button pButton type="button" label="Remove"
+            class="left50 user-group-remove p-button-raised p-button-danger"></button>
+    </section>
+</main>

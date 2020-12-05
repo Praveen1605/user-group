@@ -1,0 +1,35 @@
+.user-check-box{
+    .user-check-box-image{
+        max-height: 125px;
+        min-height: 125px;
+        max-width: 150px;
+        min-width: 150px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .user-check-box-name{
+        background-color: #2196F3;
+        width: 150px;
+        height: 40px;
+        position: relative;
+        text-align: center;
+        color: white;
+        padding: 9px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        position: relative;
+        right: 150px;
+        display: inline-block;
+        top: 23px;
+    }
+    .user-check-box-tick{
+        background-color: #2196F3;
+        padding: 12px;
+        bottom: 98px;
+        position: relative;
+        right: 41px;
+        border-top-right-radius: 30px;
+        color: white;
+        display: inline;
+    }
+}
